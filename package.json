@@ -1,17 +1,19 @@
 {
-  "name": "reactutils",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@RuchyBrach/reactutils",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build && npx tsc --build tsconfig.json",
     "lint": "oxlint",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-hook-form": "^7.83.0",
+    "zustand": "^5.0.14"
   },
   "devDependencies": {
     "@types/node": "^24.13.3",
@@ -21,5 +23,22 @@
     "oxlint": "^1.75.0",
     "typescript": "~6.0.2",
     "vite": "^8.2.0"
-  }
+  },
+  "description": "Reusable React code for fetching data and managing logins",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuchyBrach/ReactUtils.git"
+  },
+  "keywords": [],
+  "author": "Ruchy Brach",
+  "license": "MIT"
 }
